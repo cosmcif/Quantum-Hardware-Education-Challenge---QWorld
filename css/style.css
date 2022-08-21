@@ -1,0 +1,173 @@
+@import "core.css";
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+.header {
+  min-height: 90vh;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.header img{
+  z-index: -1;
+  width:100vw;
+  height:100vh;
+  object-fit:cover;
+  filter:brightness(30%);
+}
+
+
+.page {
+  min-height: 50px;
+  width: 100%;
+  background-color: var(--color-bg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/*_________________________________________________________________*/
+
+
+/*-- The following lines will correspond to the TEXT-BOX alignment /
+Please remeber that the position may be adjusted "left "top" --*/
+
+.text-box {
+  width: 90%;
+  color: var(--color-text-light);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text-box h1 {
+  font-size: 50px;
+  margin-bottom:16px;
+  color: var(--color-text-light);
+}
+
+
+
+.overview {
+  margin: 50px auto;
+  width: 80%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/cielo.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.overview h1 {
+  color: var(--color-text-light);
+  margin-bottom: 40px;
+  padding: 50;
+}
+
+.overview p{
+  font-size:1em;
+  color: var(--color-text-light);
+}
+
+
+.row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+  color: var(--color-text-light);
+}
+
+
+.years {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding: 32px 64px;
+}
+
+.years-row{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  grid-gap:32px;
+}
+
+.years-k {
+  margin:auto;
+  border-radius:10px;
+  overflow:hidden;
+  position:relative;
+}
+
+.years-k img {
+  height: auto;
+  width: 100%;
+}
+
+h1 {
+  color: var(--color-text);
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  padding-top: 30px;
+}
+
+
+/*-- Hover/Cover elements --*/
+
+.cover {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 1s;
+}
+
+.cover:hover {
+  background: rgba(226, 0, 0, 0.7);
+}
+
+.cover h3 {
+  font-weight: 600;
+  color: var(--color-text-light);
+  font-size: 26px;
+}
+
+.cover div{
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.cover:hover div {
+  bottom: 40%;
+  opacity: 1;
+}
+
+.button {
+  border-color:var(--color-text-light);
+  color:var(--color-text-light);
+}

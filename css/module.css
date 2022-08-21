@@ -1,0 +1,90 @@
+/* DO NOT EDIT */
+@import "core.css";
+
+
+/* Image related */
+img {
+    width: 100%;
+}
+.brd-round {
+    margin: 0 20px 0 20px;
+    border-radius: 50px 20px;
+}
+
+.nav-link{
+    color: var(--color-text)!important;
+    display:none;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.navbar-right{
+    margin-left: auto;
+    column-gap: 1em;
+}
+
+.nav-links{
+    column-gap: 2em;
+}
+
+.nav-links, .navbar-right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Changes for Dark/Light mode switcher */
+
+
+#toggleMenuSVG{
+    width: 60px;
+    height: 45px;
+    position:relative;
+}
+
+#toggleMenu{
+    width: 100px;
+    height: 100px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+#toggleMenuSVG span{
+    display: block;
+    height:5px;
+    margin-top:5px;
+    border-radius:8px;
+    background-color:var(--color-text);
+    transition:all .5s;
+}
+
+#toggleMenuSVG span:nth-child(1){
+    width: 35px;
+}
+#toggleMenuSVG span:nth-child(2){
+    width: 28px;
+    margin-left:12px;
+}
+#toggleMenuSVG span:nth-child(3){
+    width: 35px;
+    margin-left:12px;
+}
+#toggleMenuSVG span:nth-child(4){
+    width: 40px;
+    margin-left: 20px;
+}
+
+.openedMenu span:nth-child(1){
+    margin-left:25px!important;
+}
+.openedMenu span:nth-child(2){
+    margin-left:20px!important;
+}
+.openedMenu span:nth-child(3){
+    margin-left:16px!important;
+}
+.openedMenu span:nth-child(4){
+    margin-left:4px!important;
+}

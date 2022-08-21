@@ -1,0 +1,176 @@
+/* Loading Bootstrap 5 */
+@import "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css";
+
+/* Loading colors */
+@import 'colors.css';
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+  /*src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');*/
+}
+
+
+body {
+    font-family: Lato;
+    width: 100%;
+    height: 100vh;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-size: 1.25em;
+    transition: all .25s;
+}
+
+.navbar-brand img {
+    height: 75px;
+}
+/* Base components*/
+
+.title {
+    font-size: 4em;
+    color: var(--color-accent);
+    text-align: justify;
+}
+
+.subtitle {
+    font-size: 1.75em;
+    color: var(--color-secondary);
+    margin-top:.5em;
+}
+
+.paragraph {
+    text-align: justify;
+}
+
+.left-line {
+    border-left: 1px solid var(--color-secondary);
+}
+
+.button {
+    text-decoration: none;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    border-radius: 5px;
+    padding: 12px 34px;
+    font-size: 16px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.button:hover {
+    border: 1px solid var(#D65551);
+    background: #D65551;
+    color:white;
+}
+
+.button-light{
+    color:var(--color-text-light);
+    border-color:var(--color-text-light);
+}
+/* Table */
+table {
+    margin: 40px 0 40px 0;
+    border-collapse: collapse;
+    border-radius: 15px 7px;
+    -moz-border-radius: 15px 7px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 10px;
+}
+td {
+    border-top: 1px solid var(--color-text);
+}
+
+thead th {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+tbody td {
+    color: var(--color-text);
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Link */
+.link {
+    text-decoration: none;
+    color: var(--color-secondary);
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: var(--color-accent);
+    transition: .3s ease-in-out;
+}
+
+/*--Footer--*/
+
+address{
+    margin:0!important;
+}
+.footer {
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .footer {
+    width: 100%;
+    text-align: center;
+    padding: 2em 0 1em 0;
+  }
+
+  .footer h4 {
+    font-size: 25px;
+    float:left;
+    font-weight: 600;
+  }
+.footer p{
+    float:right;
+}
+
+.footer p, .footer h4{
+    margin:16px 48px;
+}
+
+
+
+/* DARK MODE SWITCHER */
+
+.dark-mode {
+  background-color: var(--color-bg-dark);
+}
+
+.svg{
+    filter: invert(var(--filter-invert));
+    transition: all .25s;
+}
+
+.title-dark {
+    font-size: 4em;
+    color: var(--color-accent-dark);
+    text-align: justify;
+}
+
+.subtitle-dark {
+    font-size: 1.75em;
+    color: var(--color-secondary-dark);
+    margin-top:.5em;
+}
+
+.link-dark {
+    text-decoration: none;
+    color: var(--color-secondary-dark);
+}
+
+.link-dark:hover {
+    text-decoration: underline;
+    color: var(--color-accent-dark);
+    transition: .3s ease-in-out;
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 21 21" style="vertical-align: -0.125em;" xmlns="http://www.w3.org/2000/svg">
+  <g transform="matrix(0.063265, 0, 0, 0.063265, 15.127933, 6.685813)" style="">
+    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(-175.05 -175.05000000000004) scale(3.89 3.89)">
+      <path d="M 41.338 66.382 C 41.168 66.227 40.918 66.196 40.714 66.304 C 34.885 69.395 27.733 67.339 24.432 61.622 C 21.13 55.904 22.926 48.683 28.518 45.18 C 28.714 45.057 28.811 44.825 28.76 44.6 C 28.712 44.375 28.527 44.205 28.298 44.176 C 24.674 43.709 21.086 44.43 17.919 46.258 C 14.089 48.47 11.349 52.041 10.203 56.314 C 9.057 60.587 9.646 65.05 11.858 68.88 C 14.07 72.712 17.64 75.452 21.913 76.597 C 23.34 76.979 24.789 77.168 26.226 77.168 C 29.096 77.168 31.928 76.415 34.481 74.944 C 37.646 73.115 40.065 70.367 41.474 66.997 C 41.562 66.784 41.509 66.538 41.338 66.382 Z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill-rule: nonzero; opacity: 1; fill: rgb(48, 48, 48);" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>
