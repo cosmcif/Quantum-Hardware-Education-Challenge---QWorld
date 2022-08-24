@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="author" content="name"/>
+  <meta name="author" content="Seyedeh Mahshad Hosseini"/>
   <title>Module 4</title>
   <link rel="stylesheet" href="../css/module.css" />
   <script src="../js/jquery.min.js"></script>
@@ -37,31 +37,64 @@
   <!--    MAIN    -->
   <section class="container clr-light">
     <!-- Element: Title -->
-    <h1 class="title">Module 4 - Detecting Photons</h1>
+    <h1 class="title">Module 4 - Photonic Circuits</h1>
     <!-- Element: Split Screen -->
     <div class="row">
       <div class="col-md-7 paragraph">
-        <!-- Element: Subtitle -->
-        <h2 class="subtitle">Subtitle</h2>
-        <p>Lorem ipsum</p>
-        <p>loem impsum.</p>
-
-        <h2 class="subtitle">subtitle</h2>
-                <p>Phasellus id arcu non tortor mollis sagittis. Praesent sagittis magna sit amet bibendum placerat. Vivamus egestas, metus eu varius eleifend, magna quam varius augue, a facilisis augue dui sed sapien. Mauris tempus
-          consequat malesuada. Proin ultricies blandit nunc in hendrerit. Ut luctus odio ut suscipit malesuada.
-          Curabitur placerat sem diam, quis interdum nisl congue quis. Suspendisse nec neque ante. Proin egestas viverra
-          elementum. Integer congue tortor urna, ac fermentum justo venenatis a. Integer vel laoreet odio, vel consequat
-          dui. Vestibulum auctor vel lorem quis mattis. Aenean eros nunc, blandit in erat aliquet, bibendum luctus eros.
-          Ut vulputate, libero id ornare tincidunt, dui lacus porttitor felis, vitae aliquet risus arcu vel nunc. Nullam
-          sed dui blandit, egestas ante et, eleifend neque. Aliquam quis ipsum in nibh ultricies convallis. Curabitur
-          eget imperdiet massa, sit amet ultricies diam. Sed imperdiet interdum mauris, eu elementum augue eleifend nec.
-          Sed in tincidunt dui. Fusce mollis, nibh vel tincidunt gravida, nisl massa convallis ex, efficitur mollis
-          lacus turpis ullamcorper sapien.</p>
+        <h2 class="subtitle">Quantum Integrated Photonics Chips</h2>
+        <p>A light beam has different properties, such as:
+        <ol>
+    <li>Total power</li>
+    <li>Intensity</li>
+    <li>Phase profile</li>
+    <li>Polarization</li>
+    <li>Wavelength</li>
+</ol>The quantum properties of light can be manipulated to encode computational problems and to carry information. In photonic quantum computers, the properties of input light particles (photons) are manipulated, and then the properties of output photons are measured and detected.<br>
+Different optical components such as beam splitters and phase shifters could be used for manipulating the light. In linear-circuits, optical components are described by transmission matrices. In order to use optical components for computing, the quantum unitary gates must be implemented in the form of a matrix transformation applied to the input-photons’ states.<br>
+The picture below shows a quantum optical set-up which was built on an optical table with an area about 3 square meters and was used for creating a 100-mode photonic quantum processor. But to achieve the quantum advantage, more qubits are needed, so using the bulky optical components is not feasible for this aim.
+</p> <p></p>
+      <img class="brd-round" src="2.jpg">
+        <p></p>
+      <p>The solution for this is Integrated Photonics technology. The image below shows a comparison of a bulky and integrated Mach-Zehnder interferometer (top) and a quantum teleportation set-up (bottom) based on their size.</p>
+      <p></p>
+      <img class="brd-round" src="3.jpg">
+      <p></p>
+      <p>Mach-Zender interferometers are the building blocks of the programmable photonic chips which are used for photonics quantum computers. They consist of two beam splitters and internal and external phase shifters. By using tunable phase shifters, any arbitrary state on the Bloch-sphere is achievable.</p>
+      <p></p>
+      <img class="brd-round" src="4.jpg">
+      <p></p>
+      <p>In other words, a phase shifter in a Mach-Zender configuration can act as a switch. There are several ways that phase shifters can be constructed, including thermo-electric effect, electro-optical effect, and electro-mechanical effect. With a mesh of Mach-Zender interferometers, we can construct a multiport interferometer that is called a universal unitary photonic chip. In the image below, a silicon photonic chip is shown. </p>
+      <p></p>
+        <img class="brd-round" src="5.jpg">
+        <p></p>
+      <p>Universal multiport interferometers are optical networks that perform arbitrary unitary transformations on input vectors of coherent light modes. Such devices are crucial technologies for the applications including quantum computing (e.g. boson sampling, photon walks), photonic neural networks, and manipulation of photonic quantum states in e.g. quantum teleportation, and quantum key distribution.</p>
+      <p>In the figure below, Mesh diagram representing the locally interacting rectangular mesh for N = 8 mode. The MZI nodes are represented by red dots labelled. The nodes represent the Givens rotation Un (in orange) at vertical layer l (in green). As you see, each photonic MZI node is represented with 50:50 beamsplitters B (red) and phase shifters Rθ, Rφ (orange) with required ranges 0 ≤ θ ≤ π and 0 ≤φ< 2π.</p>
+        <p></p>
+      <img class="brd-round" src="6.jpg">
+        <p></p>
+      <p>A single-mode phase shifter can perform an arbitrary U(1) transformation eiφ on its input. A phase-modulated Mach-Zehnder interferometer (MZI) with perfect (50 : 50) beamsplitters can apply to its inputs a unitary transformation U of the form:</p>
+      <p></p>
+      <img src="7.jpg">
+      <p></p>
+      <p>where B is the beam splitter operator, Rθ, Rφ are upper phase shift operators. If one or two single-mode phase shifters are added at the inputs, we can apply an arbitrary SU(2) or U(2) transformation to the inputs, respectively. We define the transmissivity and reflectivity of the MZI as: </p>
+      <p></p>
+      <img src="8.jpg">
+      <p></p>
+      <p>In this convention, when θ = π, we have r = 1, t = 0 (the MZI “bar state”), and when θ = 0, we have r = 0, t = 1 (the MZI “cross state”). </p>
+      <p>Universal 𝑁-mode multiport interferometer (shown here for 𝑁=8) can be implemented using a mesh of 𝑁(𝑁−1)/2 MZIs.</p>
+      <p>An ideal, lossless multiport interferometer between 𝑁channels performs an optical transformation which can be described by an 𝑁×𝑁 unitary scattering matrix 𝑈 acting on electric fields as 𝑬out=𝑈𝑬in. Equivalently, in quantum optics, 𝑈 describes the transformation of the creation or annihilation operators of the input modes to those of the output modes.</p>
+      <p>If there are N input modes and the interferometer is connected to waveguides n and n + 1 then we can embed the 2 × 2 unitary U from Equation 1 in N-dimensional space with a Un defined as:</p>
+      <p></p>
+      <img src="9.jpg">
+      <p></p>
+      <p>Choosing the suitable photonic mesh architecture and initialization of the components may have a critical role in maximizing the scalability and stability of reconfigurable universal photonic devices regarding the expected application. In the picture the most common MZI mesh topologies for implementing unitary matrix transformations are illustrated: (a) triangular, (b) rectangular, and (c) diamond.</p>
+      <p></p>
+      <img src="10.jpg">
+      <p></p>
       </div>
       <!-- Element: Image -->
       <div class="col-md-5">
-        <img class="brd-round" src="../images/lego1.png">
-        <p></p>
+        <img class="brd-round" src="1.jpg">
       </div>
     </div>
     <!--TODO: Add table-->

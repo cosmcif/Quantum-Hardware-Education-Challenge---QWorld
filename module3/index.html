@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="author" content="name"/>
+  <meta name="author" content="Deeksha Dadhich"/>
   <title>Module 3</title>
   <link rel="stylesheet" href="../css/module.css" />
   <script src="../js/jquery.min.js"></script>
@@ -37,30 +37,152 @@
   <!--    MAIN    -->
   <section class="container clr-light">
     <!-- Element: Title -->
-    <h1 class="title">Module 3 - Photonic Circuits</h1>
+    <h1 class="title">Module 3 - Photonic Qubit Processing</h1>
     <!-- Element: Split Screen -->
     <div class="row">
       <div class="col-md-7 paragraph">
+        <p>As discussed in previous modules, the qubit in photonic computing is a photon, the smallest excitation of the electromagnetic field. In this module, we will learn how this photon can be manipulated to obtain different qubit operations.</p>
         <!-- Element: Subtitle -->
-        <h2 class="subtitle">Subtitle</h2>
-        <p>Lorem ipsum</p>
-        <p>loem impsum.</p>
+        <h2 class="subtitle">Quantum States of a Photon</h2>
+        <p>Similar to other types of Qubits, photons can be represented as vectors indicating the state of a photon in the infinite state space.
+Some examples of photon state representation are:
+        <ol>
+    <li>Photon Polarization</li>
+    <li>Spatial Modes</li>
+    <li>Time bins</li>
+</ol></p>
 
-        <h2 class="subtitle">subtitle</h2>
-                <p>Phasellus id arcu non tortor mollis sagittis. Praesent sagittis magna sit amet bibendum placerat. Vivamus egestas, metus eu varius eleifend, magna quam varius augue, a facilisis augue dui sed sapien. Mauris tempus
-          consequat malesuada. Proin ultricies blandit nunc in hendrerit. Ut luctus odio ut suscipit malesuada.
-          Curabitur placerat sem diam, quis interdum nisl congue quis. Suspendisse nec neque ante. Proin egestas viverra
-          elementum. Integer congue tortor urna, ac fermentum justo venenatis a. Integer vel laoreet odio, vel consequat
-          dui. Vestibulum auctor vel lorem quis mattis. Aenean eros nunc, blandit in erat aliquet, bibendum luctus eros.
-          Ut vulputate, libero id ornare tincidunt, dui lacus porttitor felis, vitae aliquet risus arcu vel nunc. Nullam
-          sed dui blandit, egestas ante et, eleifend neque. Aliquam quis ipsum in nibh ultricies convallis. Curabitur
-          eget imperdiet massa, sit amet ultricies diam. Sed imperdiet interdum mauris, eu elementum augue eleifend nec.
-          Sed in tincidunt dui. Fusce mollis, nibh vel tincidunt gravida, nisl massa convallis ex, efficitur mollis
-          lacus turpis ullamcorper sapien.</p>
+        <h2 class="subtitle">Polarization Qubit</h2>
+                <p>Let’s look at one way of representing information in photons: polarization.
+Classically, light is understood as a part of the electromagnetic spectrum. This can be visualized as a synchronous oscillation of electric and magnetic fields.</p>
+      <p>Polarization of an electromagnetic field can be visualized as synchronous oscillations of electric and magnetic fields. These are always mutually perpendicular to each other. For example, in the image below, the E and B represent electric and magnetic fields oscillating perpendicular to the direction of propagation of light.</p>
+      <p></p>
+        <img src="image27.png">
+        <p></p>
+      <p>We can represent polarization states as vectors similar to qubit states. For Qubits, we use states 0 and 1. For polarization, we can use states horizontal (H) and vertical (V).</p>
+      <p>|Q⟩ = α |0⟩ + β |1⟩</p>
+      <p>|P⟩ = α |H⟩ + β |V⟩</p>
+      <p>Here  α and β are the probability amplitudes of measuring the photon in either of the polarizations. This method is called polarization encoding of Qubit.</p>
+        <h2 class="subtitle">Spatial Mode Qubit</h2>
+                <p>Spatial mode of photons can be classically seen as the superposition of photons in different modes. For example, a spatial mode can be represented as:</p>
+      <p>|Q⟩ = α |0⟩ + β |1⟩</p>
+      <p>|S⟩ = α |0,1⟩ + β |1,0⟩</p>
+      <p>Where |0,1⟩ and |1,0⟩ are two orthonormal spatial modes. It should be noted that both polarization and spatial mode represent the same photon only in different basis space. Spatial-mode qubits would not be very practical for transmitting quantum information since the phase between |0 and |1 is easily randomized by different environments acting on the different modes.</p>
+      <p>In the figure provided, we can see the photons being split into two paths and combined using a beam splitter and mirrors. This device is commonly known as an interferometer and is a key concept in many quantum photonic circuits. The photon exists in a superposition of path a and path b.</p>
+      <p></p>
+        <img class="brd-round" src="image35.png">
+        <p></p>
+        <h2 class="subtitle">Time bin Qubit</h2>
+                <p>In this type of qubit encoding, the photons are considered to be in a superposition of mode of different time slots. These time slots can be seen as two different emission times or two different detection times of the photon.</p>
+      <p>Thus, similar to other encodings, we assign a state to two different time-stamps in a system and a photon can be written as</p>
+      <p>|T⟩ = α |0⟩ + β |1⟩</p>
+      <p>Where the states 0 and 1 are specific time stamps where a photon detection is made. In the conceptual diagram here, we can see generation of time encoded photons as a “variable coupler” splits photons into two different paths with different lengths and the photons arrive at different times in the output.</p>
+      <p></p>
+        <img class="brd-round" src="image43.png">
+        <p></p>
+        <h2 class="subtitle">Single Photonic Qubit gates</h2>
+                <p>Photonic gates are operations of qubits which alter the state of superposition. This can cause a change in polarization or time delay or the phase(imaginary component) of a qubit. A gate in terms of hardware is a transformation of a system state. Some popular transformation components used in photonic computing are:
+<ol>
+    <li>Phase shifting</li>
+    <li>Beam splitter</li>
+    <li>Polarization rotation</li>
+    <li>Polarizing beam splitter</li>
+    <li>Interferometer</li>
+</ol>These components can be used to build photonic gates such as CNOT, Hadamard, Rotation etc. We will look at what these components are, how they are built and what they achieve in the Bloch sphere. For recap, below is an image of the Bloch sphere and the state representation:</p>
+    <p></p>
+        <img class="brd-round" src="image21.png">
+        <p></p>
+    <img src="image24.png">
+    <p></p>
+        <h2 class="subtitle">Phase shifting</h2>
+                <p>This operation changes the phase of the EM field associated with a photon. Phase of an electromagnetic wave is dictated by the wave equation w.r.t space and time.</p>
+    <p>In simple terms, a phase shift can simply be achieved by modifying the path length of light. For example in the diagram shown here, two waves reach the end with different phases as the medium causes the lower wave to slow down with respect to the top wave.</p>
+    <p></p>
+        <img class="brd-round" src="image22.png">
+        <p></p>
+    <p>Mathematically, this amounts to a change in φ associated with the qubit state in the Bloch sphere. It can be seen as a rotation around the y-axis.</p>
+    
+   <p>|S⟩<sub>out</sub> = ε<sup>iζ</sup>|S⟩<sub>in</sub></p>
+    <p>Practically, phase shifting can be achieved with components such as optical fibers, waveguides and any transparent material with defined length and refractive index.</p>
+    <p>In the diagram shown here, the authors are achieving phase shift by using a heating element on top of the material slab (Si-WG). This heating changes the refractive index and thus changes the phase at the output w.r.t situation where no heating was applied.</p>
+    <p></p>
+        <img class="brd-round" src="image52.png">
+        <p></p>
+        <h2 class="subtitle">Beam Splitter</h2>
+                <p>As the name suggests, a beam splitter is a simple device which separates beams. For Qubit processing it modifies the spatial mode of a qubit by changing the probability amplitudes.</p>
+    <p></p>
+        <img class="brd-round" src="image50.png">
+        <p></p>
+    <p>A simple beam splitter is a partially reflecting mirror which reflects or transmits photons with some probability. These operations can transform both the phi and theta of the state in the Bloch sphere. This happens because the operation of reflection causes phase shift and the partial transmission changes the theta.</p>
+    <p>Practically, a beam splitter can be realized using special mirrors. In integrated circuits, beam splitters are ingeniously created using waveguides (light paths in circuits) where the circuit design forces splitting of light.</p>
+    <p></p>
+        <img class="brd-round" src="image26.png">
+        <p></p>
+    <p>The figure here shows an integrated photonic circuit which can act as a hadamard gate. The Qubit here are represented in terms of modes of the device geometry and are modified spatially.</p>
+        <h2 class="subtitle">Polarization Rotation</h2>
+                <p>Similar to phase shifting components which change the phase of spatial mode qubits, polarization rotation components rotate the Phi for polarization Qubits. Practically, a polarization rotation can be obtained with components such as wave plates. Wave plates can change the polarization direction and type. The gate operation is a rotation about the y-axis.</p>
+    <p></p>
+        <img class="brd-round" src="image32.png">
+        <p></p>
+        <h2 class="subtitle">Polarizing Beam Splitter</h2>
+                <p>As you can already guess, a polarizing beam splitter splits incident photons into two orthonormal polarization states. Similar to a spatial beam splitter, it can be used as a qubit operator to modify both the theta and phi of a photon.</p>
+        <h2 class="subtitle">Interferometer</h2>
+                <p>An interferometer is a device which can take a set of states and output another set of states. A simple interferometer can be constructed with beam splitters and phase shifters.</p>
+    <p></p>
+        <img class="brd-round" src="image30.png">
+        <p></p>
+    <p>In the figure here, we can see a mach-zehnder interferometer being built using two beam splitter (BS), two mirrors (M), one phase shifter (φ), and two detectors (D). This device can be extended to do tomography of the input state. However, the conceptual details of this processing have already been covered in QBronze.</p>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScmIS8hFR76Tsi6YCnuo4LmmgRvtp1Q0XK4iCfppnK3nAckdA/viewform?embedded=true" width="100%" height="633" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <p></p>
+        <img class="brd-round" src="image25.png">
+        <p></p>
+        <h2 class="subtitle">Entanglement</h2>
+                <p>Entanglement is one of the phenomena that differentiates quantum computers. As such, it’s important for a hardware platform to explore entangled qubit processing. Similar to single photon Qubit encoding, entangled photons can also be in many state spaces. Following are some examples:
+                  <ol>
+    <li>Polarization entanglement</li>
+    <li>Mode/Momentum entanglement</li>
+    <li>Time-energy entanglement</li>
+</ol>We will now look at how entangled states are obtained in photonics. Remember that mathematically, an entangled state cannot be separated into constituent single qubit states and can only be expressed as a multi-bit state. The methods to produce entangled photons can be covered in module 2.</p>
+        <h2 class="subtitle">KLM Protocol</h2>
+                <p>The KLM Protocol is a popular and important protocol in linear Quantum optical computing. Since photon - photon interaction and entanglement are very difficult to obtain, the KLM protocol relies on measurement and teleportation schemes to obtain entangled photonic qubits.</p>
+  <p>The KLM protocol uses photons in number state. Previously, we have only described polarization, spatial and time bin qubits. However, an interesting representation of photons is in terms of fock states. Simply put, fock states represent the number of photons in a state. Thus a qubit with fock state |2> will be measured as two photons, |1⟩ as one photon and |0⟩ represents no photons or vacuum state. </p>
+  <p>Thus an arbitrary state can be represented as: |Ψ⟩ = α |0⟩ + β |1⟩ + γ |2⟩.</p>
+  <p>Let’s now look at the schematic representation of KLM protocol. The protocol below will try to create a controlled Z gate. This gate will flip the sign of amplitude of |1⟩ if controlling qubit is |1⟩.</p>
+  <p></p>
+        <img class="brd-round" src="image34.png">
+        <p></p>
+  <p></p>
+        <img class="brd-round" src="image28.png">
+        <p></p>
+  <p>This protocol uses an NS gate. This is not a standard gate in quantum computing and is just a name used to describe a part of the circuit.The NS gate consists of three qubits: one qubit to flip and two qubits to assist. These states interact through three beam splitters. When the beam splitters are designed specifically, the NS gate changes the sign of the state.</p>
+  <p>|in⟩ = α |0⟩ + β |1⟩ + γ |2⟩</p>
+  <p>|out⟩ = NS |in⟩ = α |0⟩ + β |1⟩ - γ |2⟩</p>
+  <p>Note that this sign change is not always guaranteed. There is only a 25% chance that the NS gate flips the sign. This is because the sign change is guaranteed only when the the two assisting photons are measured in state |1⟩ and |0⟩ respectively.</p>
+  <p>We can now use this NS gate on a system with two Qubits: qubit 1 and qubit 2. We write down the operations below:</p>
+  <p>Initial state:</p>
+   <p>Q<sub>1</sub> = α |0⟩<sub>q</sub> + β |1⟩<sub>q</sub> = α |01⟩ + β |10⟩</p>
+  <p>Q<sub>2</sub> = γ |0⟩<sub>q</sub> + δ |1⟩<sub>q</sub> = γ |01⟩ + δ |10⟩</p>
+  <p>After the first Beam Splitter:</p>
+  <p></p>
+        <img class="brd-round" src="image40.png">
+        <p></p>
+  <p>After Two NS gates:</p>
+  <p></p>
+        <img class="brd-round" src="image45.png">
+        <p></p>
+  <p>After the second beam splitter:</p>
+  <p></p>
+        <img class="brd-round" src="image48.png">
+        <p></p>
+  <p>Thus, this gate is able to flip the sign of second qubit only when state of first qubit is |1⟩. It should be noted that this gate has a 1/16 chance of success. For all other instances when the assisting photons are not |1⟩ and |0⟩, the gate fails. However, in photonics, the failure can be detected very accurately, and this creates possibilities for developing techniques like teleportation and error correction to still achieve large scale quantum photonic computing.</p>
+        <h2 class="subtitle">Conclusion</h2>
+                <p>In this module we discovered how to connect the hardware of photon manipulation to qubit operation. We learnt about a few ways in which photons can carry information and also detailed simplified photonic qubit gates to serve as building blocks of PQC.</p>
+                <p>It should be kept in mind that the challenges of universal quantum computing require way more complex and ingenious engineering of these hardware blocks. However, with one step at a time we can learn something new everyday!</p>
       </div>
       <!-- Element: Image -->
       <div class="col-md-5">
-        <img class="brd-round" src="../images/lego1.png">
+        <p></p>
+        <img class="brd-round" src="image31.png">
         <p></p>
       </div>
     </div>
