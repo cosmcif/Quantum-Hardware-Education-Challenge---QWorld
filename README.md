@@ -1,9 +1,7 @@
 # Quantum-Hardware-Education-Challenge---QWorld
 Womanium Quantum Hackathon 2022
 
-# Womanium Quantum Hackathon 2022 - QWorld Challenge
-
-Our solution to the challenge can be found **[here](https://cosmcif.github.io/Quantum-Hardware-Education-Challenge---QWorld)**.
+Our solution to the challenge can be accessed **[here](https://cosmcif.github.io/Quantum-Hardware-Education-Challenge---QWorld)**.
 
 
 ## QGirls | Team details
